@@ -16,32 +16,33 @@ public static boolean gameOn = true;
         System.out.println(map1);
 
         Scanner move = new Scanner(System.in);
-        System.out.println("you wake up, NOW MOVE!!");
+        System.out.println("Use wasd to move(LowerCase)*Going Out Of Bounds WILL BREAK* \n< > = player room | [ ] = empty room | [☼] = winning room *notimplemented.\n\n\u001B[31mYou wake up in an unfamiliar place. NOW GO DO SOMETHING USEFUL WITH YOR LIFE");
         while (gameOn){
+            System.out.println("\u001B[30m");
             String move1 = move.nextLine();
             switch(move1){
-                case "n":{
+                case "w"s:{ //North
                     map1.Map[map1.py][map1.px] = "[" + map1.Map[map1.py][map1.px].substring(1,2) + "]";
                     map1.py--;
                     map1.SetPlayer();
                     System.out.println(map1);
                     break;
                 }
-                case "e":{
+                case "d":{ //East
                     map1.Map[map1.py][map1.px] = "[" + map1.Map[map1.py][map1.px].substring(1,2) + "]";
                     map1.px++;
                     map1.SetPlayer();
                     System.out.println(map1);
                     break;
                 }
-                case "s":{
+                case "s":{ //South
                     map1.Map[map1.py][map1.px] = "[" + map1.Map[map1.py][map1.px].substring(1,2) + "]";
                     map1.py++;
                     map1.SetPlayer();
                     System.out.println(map1);
                     break;
                 }
-                case "w":{
+                case "a":{ //West
                     map1.Map[map1.py][map1.px] = "[" + map1.Map[map1.py][map1.px].substring(1,2) + "]";
                     map1.px--;
                     map1.SetPlayer();

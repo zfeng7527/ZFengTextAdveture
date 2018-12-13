@@ -12,8 +12,8 @@ public class Map {
 
     public void SetPlayer(){
         if(Map[py][px] != null) {
-            Map[py][px] = ">" + Map[py][px].substring(1, 2) + "<";
-        } else Map[py][px]= "> <";
+            Map[py][px] = "<" + Map[py][px].substring(1, 2) + ">";
+        } else Map[py][px]= "< >";
     }
 
     public void GenerateSpecialRoom(String room) {
