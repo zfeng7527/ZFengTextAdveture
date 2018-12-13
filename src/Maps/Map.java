@@ -1,21 +1,29 @@
-package com.company;
+package Maps;
 
 public class Map {
 
-    private String[][] Map;
+    public String[][] Map;
 
-    Map(String[][] Map){
+    public Map(String[][] Map){
         this.Map=Map;
     }
 
-    void GenerateSpecialRoom(String room) {
+    public int px = 3,py = 2;
+
+    public void SetPlayer(){
+        if(Map[py][px] != null) {
+            Map[py][px] = ">" + Map[py][px].substring(1, 2) + "<";
+        } else Map[py][px]= "> <";
+    }
+
+    public void GenerateSpecialRoom(String room) {
 
         int x = (int) (Math.random() * 4);
         int y = (int) (Math.random() * 4);
         boolean placed = false;
         while (!placed){
-            if (Map[x][y] == null) {
-                Map[x][y] = room;
+            if (Map[y][x] == null) {
+                Map[y][x] = room;
                 placed = true;
             } else {
                 x = (int) (Math.random() * 4);
@@ -24,7 +32,7 @@ public class Map {
     }
     }
 
-    void fillroom(String fill){
+    public void fillroom(String fill){
         for(int i = 0; i < Map.length; i++){
             for(int j = 0;j < Map[i].length; j++) {
                 if (Map[i][j] == null) {
