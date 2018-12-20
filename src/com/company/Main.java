@@ -1,6 +1,7 @@
 package com.company;
 
 import Maps.Map;
+
 import java.util.Scanner;
 
 public class Main {
@@ -62,7 +63,7 @@ public static boolean gameOn = true;
                     break;
                 }
             }
-
+            map1.roomChecker();
         }
     }
 }

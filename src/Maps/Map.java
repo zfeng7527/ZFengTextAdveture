@@ -1,4 +1,5 @@
 package Maps;
+import com.company.Main;
 
 public class Map {
 
@@ -25,6 +26,7 @@ public class Map {
             if (Map[y][x] == null) {
                 Map[y][x] = room;
                 placed = true;
+
             } else {
                 x = (int) (Math.random() * 4);
                 y = (int) (Math.random() * 4);
@@ -51,6 +53,16 @@ public class Map {
             map1 += "\n";
         }
         return map1;
+    }
+
+    public void roomChecker(){
+        if(Map[py][px].substring(1,2).equals("☼")) {
+         System.out.println("yay! You found the winning room, Not really hard to find when creator didn't bother hiding it.");
+        Main.gameOn=false;
+        }
+        if(Map[py][px].substring(1,2).equals("♥")) {
+            System.out.println("Creator too lazy to create anything and there is too little time, so here's some text and move on. :(");
+        }
     }
 
 }
