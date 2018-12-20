@@ -36,7 +36,7 @@ public class Map {
 
     public void fillroom(String fill){
         for(int i = 0; i < Map.length; i++){
-            for(int j = 0;j < Map[i].length; j++) {
+            for(int j = 0;j < Map[i].length;j++) {
                 if (Map[i][j] == null) {
                     Map[i][j] = fill;
                 }
